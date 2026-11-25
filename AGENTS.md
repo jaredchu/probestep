@@ -2,6 +2,17 @@
 
 Start with the [project context](docs/context.md) and the [skill source](skills/probestep/SKILL.md).
 
+## Commit attribution
+
+Keep the human Git author and any existing co-author trailers. Add each applicable trailer once on commits the agent helped implement, validate, or review:
+
+```text
+Co-authored-by: Codex <noreply@openai.com>
+Co-authored-by: Claude <noreply@anthropic.com>
+```
+
+Credit actual assistance on new commits.
+
 ## Context maintenance
 
 ```text
