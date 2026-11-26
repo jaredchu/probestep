@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ProbeStep — Experimental AI debugging skill</title>
+  <meta name="description" content="An open-source agent skill for Codex and Claude Code. Choose a decision-changing check when work stalls, and read the experiments behind the preview.">
+  <meta name="author" content="Jared Chu">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://probestep.com/">
+  <link rel="icon" href="/assets/mark.png" type="image/png" sizes="64x64">
+  <link rel="stylesheet" href="/assets/site.css">
+  <meta property="og:site_name" content="ProbeStep">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ProbeStep — Experimental AI debugging skill">
+  <meta property="og:description" content="An open-source agent skill for Codex and Claude Code. Choose a decision-changing check when work stalls, and read the experiments behind the preview.">
+  <meta property="og:url" content="https://probestep.com/">
+  <meta property="og:image" content="https://probestep.com/assets/social.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="ProbeStep, experimental skill and experiment notebook">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ProbeStep — Experimental AI debugging skill">
+  <meta name="twitter:description" content="An open-source agent skill for Codex and Claude Code. Choose a decision-changing check when work stalls, and read the experiments behind the preview.">
+  <meta name="twitter:image" content="https://probestep.com/assets/social.png">
+  <meta name="twitter:image:alt" content="ProbeStep, experimental skill and experiment notebook">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Person", "@id": "https://probestep.com/#creator", "name": "Jared Chu", "url": "https://github.com/jaredchu"}, {"@type": "SoftwareSourceCode", "@id": "https://probestep.com/#skill", "name": "ProbeStep", "url": "https://probestep.com/", "description": "An open-source agent skill for Codex and Claude Code. Choose a decision-changing check when work stalls, and read the experiments behind the preview.", "version": "v0.1.0-preview.1", "codeRepository": "https://github.com/jaredchu/probestep", "license": "https://github.com/jaredchu/probestep/blob/main/LICENSE", "creator": {"@id": "https://probestep.com/#creator"}}, {"@type": "WebSite", "@id": "https://probestep.com/#website", "name": "ProbeStep", "url": "https://probestep.com/", "inLanguage": "en", "about": {"@id": "https://probestep.com/#skill"}}, {"@type": "WebPage", "@id": "https://probestep.com/#page", "url": "https://probestep.com/", "name": "ProbeStep — Experimental AI debugging skill", "description": "An open-source agent skill for Codex and Claude Code. Choose a decision-changing check when work stalls, and read the experiments behind the preview.", "isPartOf": {"@id": "https://probestep.com/#website"}, "about": {"@id": "https://probestep.com/#skill"}, "inLanguage": "en"}]}</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="/"><img src="/assets/mark.png" alt="" width="64" height="64">ProbeStep</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="/" aria-current="page">Home</a>
+      <a href="/story/">Story</a>
+      <a href="/experiments/">Experiments</a>
+      <a href="https://github.com/jaredchu/probestep">GitHub</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+  <section class="hero wrap">
+    <div>
+      <p class="eyebrow">Experimental agent skill · MIT</p>
+      <h1>Find the smallest useful check.</h1>
+      <p class="lede">ProbeStep is an open-source skill for Codex and Claude Code. When a task stalls or a decision depends on an untested assumption, it asks what evidence would change your next action.</p>
+      <div class="actions">
+        <a class="button" href="#try-the-preview">Try the preview</a>
+        <a href="https://github.com/jaredchu/probestep">View the GitHub repository</a>
+      </div>
+    </div>
+    <figure class="checkpoint" aria-labelledby="checkpoint-title">
+      <h2 id="checkpoint-title">ProbeStep checkpoint</h2>
+      <dl>
+        <div><dt>Decision</dt><dd>Can we confirm the export reached the subscriber?</dd></div>
+        <div><dt>Evidence</dt><dd>The gateway accepted the submission. The target subscriber's view has yet to be checked.</dd></div>
+        <div><dt>Smallest check</dt><dd>Read back the expected revision for that subscriber.</dd></div>
+        <div><dt>What changes</dt><dd>A match confirms delivery. An older revision keeps delivery open.</dd></div>
+      </dl>
+      <figcaption class="figure-label">Illustrative export scenario</figcaption>
+    </figure>
+  </section>
+  <section class="section wrap" aria-labelledby="notebook">
+    <h2 id="notebook">The experiment notebook</h2>
+    <div class="cards">
+      <article class="card">
+        <h3><a href="/story/">Why ProbeStep exists</a></h3>
+        <p>Repeated checks on difficult tasks led to a small rule. The next check earns its place only when a plausible result could change the decision.</p>
+      </article>
+      <article class="card">
+        <h3><a href="/experiments/">What the tests found</a></h3>
+        <p>The earlier Codex pilot tied the baseline on all six cases. Later fixture tests checked completion, evidence handoffs, and when to pause.</p>
+      </article>
+    </div>
+  </section>
+  <section class="section wrap" aria-labelledby="try-the-preview">
+    <h2 id="try-the-preview">Try the preview</h2>
+    <p>Invoke the skill explicitly when a consequential uncertainty remains. Choose your host, install the preview, then start a fresh session.</p>
+    <div class="cards">
+      <article class="card">
+        <h3><a href="https://github.com/jaredchu/probestep#try-it-in-codex">Install for Codex</a></h3>
+        <p>Invoke <code>$probestep</code>.</p>
+      </article>
+      <article class="card">
+        <h3><a href="https://github.com/jaredchu/probestep#try-it-in-claude-code">Install for Claude Code</a></h3>
+        <p>Invoke <code>/probestep</code>.</p>
+      </article>
+    </div>
+    <p class="row-links"><a href="https://github.com/jaredchu/probestep/releases/tag/v0.1.0-preview.1">v0.1.0-preview.1 release notes</a><a href="https://github.com/jaredchu/probestep/blob/v0.1.0-preview.1/skills/probestep/SKILL.md">Read the released skill</a></p>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p>ProbeStep · Experimental · <a href="https://github.com/jaredchu/probestep/releases/tag/v0.1.0-preview.1">v0.1.0-preview.1</a> · <a href="https://github.com/jaredchu/probestep/blob/main/LICENSE">MIT License</a> · <a href="https://github.com/jaredchu">Jared Chu</a></p>
+  </div>
+</footer>
+</body>
+</html>

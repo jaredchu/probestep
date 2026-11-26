@@ -7,6 +7,7 @@ Give an agent a small, evidence-based way to choose its next action when a conse
 ## Decisions
 
 - The project name is **ProbeStep** and the skill invocation is `$probestep`, matching the `probestep.com` spelling.
+- ProbeStep is an experimental skill and a public notebook about its development. The [site](https://probestep.com/) pairs the [origin story](https://probestep.com/story/) with [experiment summaries](https://probestep.com/experiments/) linked to the tagged evaluation.
 - The preview recommends explicit invocation with `$probestep` in Codex or `/probestep` in Claude Code when a consequential uncertainty remains.
 - The owner approved a stopping rule that applies even to explicit invocation. A discretionary check should run only if a plausible result could change the decision. Completion requires evidence of the requested effect and all mandatory checks.
 - When missing evidence leaves a decision open, the checkpoint names the smallest check, explains why its scope is sufficient and what can be reused or skipped, and states how to obtain the evidence and what the result would change.
@@ -39,6 +40,10 @@ The separate [Codex three-probe test](evaluation.md#codex-three-probe-pause) pas
 The [Codex overhead test](evaluation.md#codex-trivial-task-overhead) and separate [Claude Code overhead test](evaluation.md#claude-code-trivial-task-overhead) found no extra checks or turns across four pairs each on the same harmless ambiguity without explicit invocation.
 
 The [Claude Code fresh-install smoke test](evaluation.md#claude-code-fresh-install-smoke-test) verified that the native `/probestep` command loaded the exact release candidate from a fresh project-scoped install.
+
+## Website
+
+The Cloudflare Pages project `probestep` uses `website/` as its static upload directory. The homepage, story, and experiments each declare their canonical URL on `https://probestep.com`. Keep the XML sitemap in sync when adding public pages. The site links to the released skill and records the limits of each experiment alongside the results.
 
 ## Isolated checks
 

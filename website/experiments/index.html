@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ProbeStep experiments — Codex and Claude Code results</title>
+  <meta name="description" content="Compare ProbeStep&#x27;s matched Codex pilot, Claude Code portability checks, and trivial-task overhead. Includes the methods and limits of each result.">
+  <meta name="author" content="Jared Chu">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://probestep.com/experiments/">
+  <link rel="icon" href="/assets/mark.png" type="image/png" sizes="64x64">
+  <link rel="stylesheet" href="/assets/site.css">
+  <meta property="og:site_name" content="ProbeStep">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="ProbeStep experiments — Codex and Claude Code results">
+  <meta property="og:description" content="Compare ProbeStep&#x27;s matched Codex pilot, Claude Code portability checks, and trivial-task overhead. Includes the methods and limits of each result.">
+  <meta property="og:url" content="https://probestep.com/experiments/">
+  <meta property="og:image" content="https://probestep.com/assets/social.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="ProbeStep, experimental skill and experiment notebook">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ProbeStep experiments — Codex and Claude Code results">
+  <meta name="twitter:description" content="Compare ProbeStep&#x27;s matched Codex pilot, Claude Code portability checks, and trivial-task overhead. Includes the methods and limits of each result.">
+  <meta name="twitter:image" content="https://probestep.com/assets/social.png">
+  <meta name="twitter:image:alt" content="ProbeStep, experimental skill and experiment notebook">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Person", "@id": "https://probestep.com/#creator", "name": "Jared Chu", "url": "https://github.com/jaredchu"}, {"@type": "SoftwareSourceCode", "@id": "https://probestep.com/#skill", "name": "ProbeStep", "url": "https://probestep.com/", "description": "An open-source agent skill for Codex and Claude Code. Choose a decision-changing check when work stalls, and read the experiments behind the preview.", "version": "v0.1.0-preview.1", "codeRepository": "https://github.com/jaredchu/probestep", "license": "https://github.com/jaredchu/probestep/blob/main/LICENSE", "creator": {"@id": "https://probestep.com/#creator"}}, {"@type": "WebSite", "@id": "https://probestep.com/#website", "name": "ProbeStep", "url": "https://probestep.com/", "inLanguage": "en", "about": {"@id": "https://probestep.com/#skill"}}, {"@type": "WebPage", "@id": "https://probestep.com/experiments/#page", "url": "https://probestep.com/experiments/", "name": "ProbeStep experiments — Codex and Claude Code results", "description": "Compare ProbeStep's matched Codex pilot, Claude Code portability checks, and trivial-task overhead. Includes the methods and limits of each result.", "isPartOf": {"@id": "https://probestep.com/#website"}, "about": {"@id": "https://probestep.com/#skill"}, "inLanguage": "en"}, {"@type": "Article", "@id": "https://probestep.com/experiments/#article", "headline": "ProbeStep experiments", "description": "Compare ProbeStep's matched Codex pilot, Claude Code portability checks, and trivial-task overhead. Includes the methods and limits of each result.", "author": {"@id": "https://probestep.com/#creator"}, "datePublished": "2026-11-26", "mainEntityOfPage": {"@id": "https://probestep.com/experiments/#page"}, "about": {"@id": "https://probestep.com/#skill"}, "inLanguage": "en"}]}</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="/"><img src="/assets/mark.png" alt="" width="64" height="64">ProbeStep</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="/">Home</a>
+      <a href="/story/">Story</a>
+      <a href="/experiments/" aria-current="page">Experiments</a>
+      <a href="https://github.com/jaredchu/probestep">GitHub</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+  <article class="article wrap">
+    <h1>ProbeStep experiments</h1>
+    <p class="byline">By <a href="https://github.com/jaredchu">Jared Chu</a> · <time datetime="2026-11-26">November 26, 2026</time></p>
+    <p class="lede">The preview exercises a small diagnostic workflow in Codex and Claude Code. The results below are scoped to the tested models, prompts, and fixtures.</p>
+
+    <h2 id="automatic-use">Automatic use on six Codex cases</h2>
+    <p>The earlier published skill scored <strong>0 wins, 6 ties, and 0 losses</strong> in each of three configurations. GPT-6.2 Sol ran at high and low reasoning and GPT-6.2 Astra ran at medium. All configurations used the same six cases. The comparisons scored the next decision against a frozen rubric. <a href="https://github.com/jaredchu/probestep/blob/v0.1.0-preview.1/docs/evaluation.md#codex-pilot-result">Codex pilot and replays</a>.</p>
+
+    <h2 id="safeguards">Completion and handoff safeguards</h2>
+    <p>In explicit-invocation tests, both tools distinguished a successful submission receipt from a downstream effect. Both withheld sign-off on a failed mandatory boundary check. Claude Code needed one retry after the first command was denied. <a href="https://github.com/jaredchu/probestep/blob/v0.1.0-preview.1/docs/evaluation.md#completion-and-mandatory-verification">Completion fixture</a>.</p>
+    <p>Both tools reused saved intake evidence after the handoff rules were revised. An earlier Claude Code run reopened the original intake data to confirm the same result. In the separate three-probe fixture, both successors carried forward a count of two, escalated after their third discretionary probe, and ran the mandatory schema check. <a href="https://github.com/jaredchu/probestep/blob/v0.1.0-preview.1/docs/evaluation.md#codex-three-probe-pause">Codex trace summary</a> · <a href="https://github.com/jaredchu/probestep/blob/v0.1.0-preview.1/docs/evaluation.md#claude-code-portability">Claude Code trace summary</a>.</p>
+
+    <h2 id="overhead">Overhead on a trivial task</h2>
+    <p>Both hosts used four matched pairs on the same harmless filename ambiguity. The prompt did not invoke the skill. Every run finished in one task turn. The table compares availability with the disabled condition.</p>
+    <div class="scroll-table" tabindex="0" role="region" aria-label="Trivial-task overhead comparison">
+      <table>
+        <caption>Four matched pairs per host</caption>
+        <thead><tr><th scope="col">Measure</th><th scope="col">Codex</th><th scope="col">Claude Code</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Extra tool checks or turns</th><td>0</td><td>0</td></tr>
+          <tr><th scope="row">Mean input change per run, including cache</th><td>+2 tokens</td><td>+101 tokens</td></tr>
+          <tr><th scope="row">Median wall time, available</th><td>7.95 s</td><td>3.31 s</td></tr>
+          <tr><th scope="row">Median wall time, disabled</th><td>8.77 s</td><td>3.27 s</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Timing and cache hits varied. One prompt provides limited evidence about other tasks, cost, or latency. <a href="https://github.com/jaredchu/probestep/blob/v0.1.0-preview.1/docs/evaluation.md#codex-trivial-task-overhead">Codex overhead test</a> · <a href="https://github.com/jaredchu/probestep/blob/v0.1.0-preview.1/docs/evaluation.md#claude-code-trivial-task-overhead">Claude Code overhead test</a>.</p>
+
+    <h2 id="installation">Fresh Claude Code installation</h2>
+    <p>Claude Code 2.1.327 discovered the exact preview file in a fresh project-scoped install. The native <code>/probestep</code> command loaded it, and Fable 5.2 quoted the updated three-probe rule verbatim in one turn with zero tool calls. <a href="https://github.com/jaredchu/probestep/blob/v0.1.0-preview.1/docs/evaluation.md#claude-code-fresh-install-smoke-test">Installation smoke test</a>.</p>
+
+    <h2 id="open-questions">What remains open</h2>
+    <p class="note">Automatic benefit on new difficult tasks, a matched consequential-task comparison in Claude Code, and field time or rework savings remain unmeasured. The three-probe pause relies on the agent carrying the count forward and escalating.</p>
+    <p class="row-links"><a href="https://github.com/jaredchu/probestep/blob/v0.1.0-preview.1/docs/evaluation.md">Read the full evaluation at v0.1.0-preview.1</a><a href="/story/">Read the project story</a></p>
+  </article>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p>ProbeStep · Experimental · <a href="https://github.com/jaredchu/probestep/releases/tag/v0.1.0-preview.1">v0.1.0-preview.1</a> · <a href="https://github.com/jaredchu/probestep/blob/main/LICENSE">MIT License</a> · <a href="https://github.com/jaredchu">Jared Chu</a></p>
+  </div>
+</footer>
+</body>
+</html>

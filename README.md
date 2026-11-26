@@ -1,10 +1,14 @@
 # ProbeStep
 
-ProbeStep helps an agent find the smallest check that could change what you do next. Use it before investing in an uncertain approach or when work stalls and the next move is unclear.
+ProbeStep is an experimental, open-source debugging skill for Codex and Claude Code. It helps an agent choose the smallest check that could change the next action when a task stalls or a consequential assumption remains untested.
+
+The [ProbeStep notebook](https://probestep.com/) tells [the story behind the skill](https://probestep.com/story/) and reports [the experiments and their limits](https://probestep.com/experiments/).
 
 For example, before building a CMS integration, check whether its API supports the one draft operation the project depends on. When an acceptance test fails despite passing unit tests, compare their conditions and find where the behavior first differs.
 
 **Preview.** Invoke ProbeStep explicitly when the next action depends on a consequential uncertainty. Automatic selection remains experimental.
+
+The earlier Codex pilot tied the baseline on all six cases across three model configurations. Later fixture tests exercised completion evidence, handoffs, and the pause after three discretionary probes. Field benefit on new tasks remains unmeasured. [Evaluation methods and results](docs/evaluation.md)
 
 ## Try it in Codex
 

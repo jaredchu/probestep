@@ -1,0 +1,13 @@
+# ProbeStep
+
+> An experimental open-source agent skill for choosing a decision-changing check when work stalls. The preview recommends explicit invocation.
+
+## Notebook
+
+- [Home](https://probestep.com/): Purpose, an illustrative checkpoint, and installation links.
+- [Story](https://probestep.com/story/): How repeated attempts on hard tasks led to the skill.
+- [Experiments](https://probestep.com/experiments/): Matched trials, overhead, handoff safeguards, and their limits.
+- [Preview release](https://github.com/jaredchu/probestep/releases/tag/v0.1.0-preview.1): Release notes and use in Codex and Claude Code.
+- [Evaluation methods](https://github.com/jaredchu/probestep/blob/v0.1.0-preview.1/docs/evaluation.md): Procedures, results, and remaining questions.
+
+Automatic benefit on new difficult tasks and field time or rework savings remain unmeasured.
