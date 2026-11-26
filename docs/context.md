@@ -45,6 +45,8 @@ The [Claude Code fresh-install smoke test](evaluation.md#claude-code-fresh-insta
 
 The Cloudflare Pages project `probestep` uses `website/` as its static upload directory. The homepage, story, and experiments each declare their canonical URL on `https://probestep.com`. A host-specific response header excludes the Pages fallback hostname from indexing. Keep the XML sitemap in sync when adding public pages. The site links to the released skill and records the limits of each experiment alongside the results.
 
+Cloudflare uses a proxied CNAME and a zone redirect rule to send HTTP and HTTPS traffic from `www.probestep.com` directly to `https://probestep.com` with a permanent 301. The rule preserves paths and query strings.
+
 ## Isolated checks
 
 On November 26, 2026, fresh Codex CLI sessions exercised the draft with read-only synthetic fixtures.
