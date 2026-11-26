@@ -43,7 +43,7 @@ The [Claude Code fresh-install smoke test](evaluation.md#claude-code-fresh-insta
 
 ## Website
 
-The Cloudflare Pages project `probestep` uses `website/` as its static upload directory. The homepage, story, and experiments each declare their canonical URL on `https://probestep.com`. Keep the XML sitemap in sync when adding public pages. The site links to the released skill and records the limits of each experiment alongside the results.
+The Cloudflare Pages project `probestep` uses `website/` as its static upload directory. The homepage, story, and experiments each declare their canonical URL on `https://probestep.com`. A host-specific response header excludes the Pages fallback hostname from indexing. Keep the XML sitemap in sync when adding public pages. The site links to the released skill and records the limits of each experiment alongside the results.
 
 ## Isolated checks
 
